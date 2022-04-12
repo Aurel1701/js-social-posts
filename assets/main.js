@@ -51,7 +51,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=534",
         "author": {
             "name": "Mariano Di Vaio",
-            "image": "https://unsplash.it/300/300?image=15"
+            "image": null
         },
         "likes": 43,
         "created": "03-09-2021"

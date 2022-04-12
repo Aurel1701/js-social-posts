@@ -3,3 +3,13 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+body {
+	background-color: #023047;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+}
