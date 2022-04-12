@@ -7,9 +7,70 @@ body {
 	background-color: #023047;
 }
 
-header h1{
+.header h1{
     color: white;
     text-align: center;
     margin-top: 20px;
+	margin-bottom: 20px;
     font-size: 50px;
 }
+
+.lista-post {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.post { 
+    background-color: white;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.post-header {
+    margin-bottom: 16px;
+}
+
+.cnt1 {
+    display: flex;
+}
+
+.icon-cnt1{
+    margin-right: 20px;
+}
+
+.info-cnt1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name-cnt1 {
+    font-weight: bold;
+}
+
+.date-cnt1 {
+    font-size: 15px;
+}
+
+.img-cnt1 {
+    border-radius: 50%;
+    max-width: 60px;
+}
+
+.text-post {
+    margin-bottom: 20px;
+}
+
+.first-image {
+    margin-bottom: 16px;
+	width: 100%;
+}
+
+.likes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
