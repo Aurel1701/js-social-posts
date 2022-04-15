@@ -56,8 +56,8 @@ const posts = [
         "likes": 43,
         "created": "03-09-2021"
     },
-  
-  
+
+
 ];
 
 
@@ -65,7 +65,7 @@ const posts = [
 const homepage = document.querySelector(".lista-post");
 
 for (let index = 0; index < posts.length; index++) {
-  homepage.insertAdjacentHTML('beforeend', `<div class="post">
+    homepage.insertAdjacentHTML('beforeend', `<div class="post">
   <div class="post-header">
       <div class="cnt1">
           <div class="icon-cnt1">
@@ -80,12 +80,10 @@ for (let index = 0; index < posts.length; index++) {
   <div class="text-post">${posts[index].content}</div>
   <img class="first-image" src="${posts[index].author.image}" alt="">
   <div>
-      <div class="likes">
-          <div>
-                  <button id="button-like">Mi Piace</button>
-          </div>
-          <div>
-              Piace a <b>${posts[index].likes}</b> persone
+      <div class="likes"> 
+            <button data-index = ${index} id="button-like">Mi Piace</button> 
+          <div class="button-js">
+              Piace a <span class="number-like">${posts[index].likes}</span> persone
           </div>
       </div>
   </div>
@@ -98,21 +96,18 @@ for (let index = 0; index < posts.length; index++) {
   
   `
 
-  )
-    
+    )
+
 }
 
-document.addEventListener("click", function(event){
+document.addEventListener("click", function (event) {
     console.log(event.target);
- if (event.target.id === "button-like") {
-     console.log(event.child);
-
-     
- }
-
-
-
-
+    if (event.target.id === "button-like") {
+        let x = event.target.getAttribute("data-id") + 1;
+        console.log(x);
+        let result = parseInt(document.querySelectorAll('.like-number')[x].innerText) + 1;
+        document.querySelectorAll('.like-number')[x].innerHTML = `${result}`;
+    }
 });
 
 
