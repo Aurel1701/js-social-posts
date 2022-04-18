@@ -81,9 +81,9 @@ for (let index = 0; index < posts.length; index++) {
   <img class="first-image" src="${posts[index].author.image}" alt="">
   <div>
       <div class="likes"> 
-            <button data-index = ${index} id="button-like">Mi Piace</button> 
+            <button data-id="${posts[index].id}" id="button-like">Mi Piace</button> 
           <div class="button-js">
-              Piace a <span class="number-like">${posts[index].likes}</span> persone
+              Piace a <span class="like-number">${posts[index].likes}</span> persone
           </div>
       </div>
   </div>
@@ -103,7 +103,7 @@ for (let index = 0; index < posts.length; index++) {
 document.addEventListener("click", function (event) {
     console.log(event.target);
     if (event.target.id === "button-like") {
-        let x = event.target.getAttribute("data-id") + 1;
+        let x = event.target.getAttribute("data-id") - 1;
         console.log(x);
         let result = parseInt(document.querySelectorAll('.like-number')[x].innerText) + 1;
         document.querySelectorAll('.like-number')[x].innerHTML = `${result}`;
