@@ -107,8 +107,11 @@ document.addEventListener("click", function (event) {
         console.log(x);
         let result = parseInt(document.querySelectorAll('.like-number')[x].innerText) + 1;
         document.querySelectorAll('.like-number')[x].innerHTML = `${result}`;
+        event.target.classList.add("btn-js")
+         
     }
 });
+
 
 
 
